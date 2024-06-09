@@ -24,7 +24,7 @@ C:\Users\{UserName}\AppData\Local\Google\AndroidStudio20XX.X\caches
 2. flutter pub get
 
 
-## ビルドエラー
+### ビルドエラー
 
 Nuget is not installed.
 Attempting to download nuget.
