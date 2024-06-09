@@ -1,0 +1,125 @@
+name: flutter_example
+description: "Flutter sample collection project."
+
+# 以下の行はパッケージが誤って pub.dev に公開されるのを防ぎます。
+# これはプライベートパッケージのために推奨されます。
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# 以下は、アプリケーションのバージョンとビルド番号の定義です。
+# バージョン番号とは、1.2.43のようにドットで区切られた3つの番号です。ビルド番号は+で区切られます。
+# バージョン番号とビルド番号は # flutterで上書きすることができる。
+# build-nameと-build-numberをそれぞれ指定することで # ビルドを上書きすることができる。
+# Androidでは、build-nameはversionNameとして使われ、build-numberはversionCodeとして使われる。
+# Androidのバージョン管理について詳しくは https://developer.android.com/studio/publish/versioning を参照。
+# iOSでは、build-nameはCFBundleShortVersionStringとして使用され、build-numberはCFBundleVersionとして使用されます。
+# iOSのバージョン管理について詳しくは
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# Windowsでは, build-nameはメジャー, マイナー, パッチとして利用されます.
+# Windowsの場合, build-numberはビルドサフィックスとして使用されます.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+
+  # 依存パッケージは、あなたのパッケージが動作するために必要とする他のパッケージを指定します。
+
+  # パッケージの更新を確認する
+  # flutter pub outdated
+  # Current：自分が今使っているバージョン
+  # Upgradable：アップグレードできる安定版のバージョン
+  # Resolvable：自分が使っている他のパッケージとの整合性を考慮した上で、アップグレードできるバージョン
+  # Latest：β版も含めた最新版
+# 依存パッケージを自動的に最新バージョンにアップグレードする
+# flutter pub upgrade -major-versions
+# パッケージ取得コマンド
+# flutter pub get
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # FlutterのCupertinoウィジェットで使用されるアイコンアセットを含むアセットリポジトリ
+  # https://pub.dev/packages/cupertino_icons
+  cupertino_icons: ^1.0.6
+  # HTTP リクエストを行うための構成可能な Future ベースのライブラリ
+  # https://pub.dev/packages/http
+  http: ^1.2.1
+  # メッセージの翻訳、複数形と性別、日付/数値の書式設定と解析、双方向テキストなどの国際化およびローカリゼーション機能
+  # https://pub.dev/packages/intl
+  intl: ^0.19.0
+  # ブロックとキュービットをFlutterに簡単に統合できるウィジェット
+  # https://pub.dev/packages/flutter_bloc
+  flutter_bloc: ^8.1.5
+  # ライフサイクルを管理する新しい種類のオブジェクト
+  # https://pub.dev/packages/flutter_hooks
+  flutter_hooks: ^0.20.5
+  # リアクティブキャッシュおよびデータバインディングフレームワーク
+  # https://pub.dev/packages/hooks_riverpod
+  hooks_riverpod: ^2.5.1
+  # URL を起動するための Flutter プラグイン
+  # https://pub.dev/packages/url_launcher
+  url_launcher: ^6.2.6
+  # ファイルシステム上でよく使用される場所を見つけるための Flutter プラグイン(Android、iOS、Linux、macOS、Windows)
+  # https://pub.dev/packages/path_provider
+  path_provider: ^2.0.14
+  # RouterAPIを使用して異なる画面間を移動するための便利なURLベースのAPIを提供するルーティングパッケージ
+  # https://pub.dev/packages/go_router
+  go_router: ^14.1.4
+  # 非常に高速で使いやすく、完全に非同期な Flutter 用の NoSQL データベース
+  # https://pub.dev/packages/isar
+  isar: ^3.1.0+1
+  # Isar データベース用の Isar Core バイナリ
+  # https://pub.dev/packages/isar_flutter_libs
+  isar_flutter_libs: ^3.1.0+1
+  # 単純なデータ用のプラットフォーム固有の永続ストレージ
+  # https://pub.dev/packages/shared_preferences
+  shared_preferences: ^2.2.3
+  # WEBビュー iOS,Android
+  # https://pub.dev/packages/webview_flutter
+  webview_flutter: ^4.8.0
+  # WEBビュー Windows
+  # https://pub.dev/packages/webview_windows
+  webview_windows: ^0.4.0
+
+
+# プロジェクトを作っている段階でのみ必要なパッケージ
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # 適切なコーディング プラクティスを促進するための、 Flutterアプリ、パッケージ、プラグイン用の推奨 lint セット
+  # `analysis_options.yaml` ファイルで有効にする。
+  # https://pub.dev/packages/flutter_lints
+  flutter_lints: ^4.0.0
+  # Dart 用のスタンドアロン ジェネレーターおよびウォッチャー
+  # https://pub.dev/packages/build_runner
+  build_runner: ^2.4.10
+  # Isar データベース用のコードジェネレーター。@Collection で注釈が付けられたクラスを検索して生成する。
+  # https://pub.dev/packages/isar_generator
+  # .g ファイル生成コマンド
+  # flutter pub run build_runner build
+  isar_generator: ^3.1.0+1
+  # go_router 用に生成された強く型付けされたルートヘルパーをサポートするビルダー
+  # https://pub.dev/packages/go_router_builder
+  # .g ファイル生成コマンド
+  # flutter pub run build_runner build
+  # go_router_builder: ^2.7.0
+
+
+# 以下のセクションはFlutterパッケージ特有のものです。
+flutter:
+
+  # material Iconsクラスのアイコンを使用できるようにします。
+  uses-material-design: true
+
+
+
+# このファイルの一般的なDart部分に関する情報については、以下のページを参照のこと。
+# https://dart.dev/tools/pub/pubspec
+# 画像アセットは、1つまたは複数の解像度固有の「バリアント」を参照することができます。
+# https://flutter.dev/assets-and-images/#resolution-aware
+# パッケージの依存関係からアセットを追加する方法の詳細については、以下を参照してください。
+# https://flutter.dev/assets-and-images/#from-packages
+# パッケージ依存のフォントに関する詳細
+# https://flutter.dev/custom-fonts/#from-packages
